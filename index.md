@@ -2,14 +2,26 @@
 title: Home
 layout: home
 ---
-I want to test if this is deployed
 
-
-## Visual Representation of Mapping
+## Reuma.pt to OMOP CDM 5.4
 
 ```mermaid
-graph TD
-  A[Source Dataset: Demographics] --> B[Transformation 1: Convert Date Format]
-  B --> C[OMOP CDM: Person Table]
-  D[Source Dataset: Diagnosis Records] --> E[Transformation 2: Code Mapping]
-  E --> F[OMOP CDM: Condition Occurrence Table]
+graph LR
+  subgraph Sources
+    A[PatientData.csv]
+    D[PatientDatesData.csv]
+    F[VisitData.csv]
+    G[SF36.csv]
+  end
+  
+  subgraph CDM Tables
+    B[person]
+    E[observation_period]
+    H[visit_occurrence]
+    I[stem_table]
+  end
+  
+  A --> B
+  D --> E
+  F --> H
+  G --> I
