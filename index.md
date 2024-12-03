@@ -7,9 +7,10 @@ layout: home
 
 ```mermaid
 graph LR
-  %% Define styling for the different groups
-  classDef sourceStyle fill:#FFDDC1,stroke:#333,stroke-width:2px;
-  classDef cdmStyle fill:#C1E1FF,stroke:#333,stroke-width:2px;
+  %% Define styling for different groups
+  classDef sourceStyle fill:#FFDDC1,stroke:#333,stroke-width:2px;   %% Light peach for Sources
+  classDef cdmStyle fill:#C1E1FF,stroke:#333,stroke-width:2px;      %% Light blue for CDM Tables
+  classDef stemStyle fill:#FFD700,stroke:#333,stroke-width:2px;     %% Gold color for Stem Table
 
   %% Define subgraphs (groups) for clarity
   subgraph Sources
@@ -23,7 +24,7 @@ graph LR
     B[person]:::cdmStyle
     E[observation_period]:::cdmStyle
     H[visit_occurrence]:::cdmStyle
-    I[stem_table]:::cdmStyle
+    I[stem_table]:::stemStyle  %% Stem table gets its own color/style
   end
 
   %% Define relationships between nodes
