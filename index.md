@@ -7,20 +7,26 @@ layout: home
 
 ```mermaid
 graph LR
+  %% Define styling for the different groups
+  classDef sourceStyle fill:#FFDDC1,stroke:#333,stroke-width:2px;
+  classDef cdmStyle fill:#C1E1FF,stroke:#333,stroke-width:2px;
+
+  %% Define subgraphs (groups) for clarity
   subgraph Sources
-    A[PatientData.csv]
-    D[PatientDatesData.csv]
-    F[VisitData.csv]
-    G[SF36.csv]
+    A[PatientData.csv]:::sourceStyle
+    D[PatientDatesData.csv]:::sourceStyle
+    F[VisitData.csv]:::sourceStyle
+    G[SF36.csv]:::sourceStyle
   end
-  
+
   subgraph CDM Tables
-    B[person]
-    E[observation_period]
-    H[visit_occurrence]
-    I[stem_table]
+    B[person]:::cdmStyle
+    E[observation_period]:::cdmStyle
+    H[visit_occurrence]:::cdmStyle
+    I[stem_table]:::cdmStyle
   end
-  
+
+  %% Define relationships between nodes
   A --> B
   D --> E
   F --> H
