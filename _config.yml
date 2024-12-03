@@ -1,6 +1,8 @@
 title: Just the Docs Template
 description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
+plugins:
+  - jekyll-spaceship
 
 url: https://rgand1.just-the-docs.github.io//Reuma.pt
 
