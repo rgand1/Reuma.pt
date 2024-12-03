@@ -8,3 +8,8 @@ url: https://rgand1.just-the-docs.github.io//Reuma.pt
 
 aux_links:
   Template Repository: https://github.com/rgand1/Reuma.pt
+
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.3"
