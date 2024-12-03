@@ -35,12 +35,13 @@ graph LR
     C3[observation]:::cdmStyle
   end
 
-  %% Define relationships between nodes
+  %% Define relationships between nodes to improve layout and alignment
+  %% Map individual sources to their corresponding CDM Tables
   A --> B
   D --> E
   F --> H
 
-  %% Map all relevant sources to stem_table
+  %% Map all relevant sources to stem_table in parallel to improve alignment
   G1 --> I
   G2 --> I
   G3 --> I
@@ -48,7 +49,7 @@ graph LR
   G5 --> I
   G6 --> I
 
-  %% Map stem_table to other CDM tables
+  %% Map stem_table to other CDM tables in sequence
   I --> C1
   I --> C2
   I --> C3
