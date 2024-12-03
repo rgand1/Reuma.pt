@@ -24,7 +24,7 @@ graph LR
     B[person]:::cdmStyle
     E[observation_period]:::cdmStyle
     H[visit_occurrence]:::cdmStyle
-    I[stem_table]:::stemStyle  %% Stem table gets its own color/style
+    I[stem_table]:::stemStyle  %% Assigning stemStyle to stem_table
   end
 
   %% Define relationships between nodes
